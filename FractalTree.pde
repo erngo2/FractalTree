@@ -20,6 +20,10 @@ public void draw()
 	drawTrees(370, 580, 370, 480, brLen, 3 * Math.PI / 2); 
 	if(brLen <= 125 && frameCount % 3 == 0)
 		brLen++;
+	if(l)
+		branchAngle -= 0.005;
+	if(r)
+		branchAngle += 0.005;
 } 
 
 public void mousePressed()
@@ -36,12 +40,22 @@ public void mouseReleased()
 		loop();
 }
 
+boolean r;
+boolean l;
 public void keyPressed()
 {
 	if(keyCode == LEFT)
-		branchAngle -= 0.005;
+		l = true;
 	if(keyCode == RIGHT)
-		branchAngle += 0.005;
+		r = true;
+}
+
+public void keyReleased()
+{
+	if(keyCode == LEFT)
+		l = false;
+	if(keyCode == RIGHT)
+		r= false;
 }
 
 double temp = 1;
