@@ -7,15 +7,15 @@ public void setup()
 {   
 	size(740,580);    
 	//noLoop(); 
-	background(10);
+	background(5);
 	frameRate(60);
 } 
 
 public void draw() 
 {      
 	//if(frameCount % 10 == 0)
-	background(10, 10, 10, 10);
-	stroke(78, 250, 42, 160);  
+	background(5, 5, 5);
+	stroke(78, 250, 62);  
 	//if(frameCount % 5 == 0)
 	drawTrees(370, 580, 370, 480, brLen, 3 * Math.PI / 2); 
 	if(brLen <= 125 && frameCount % 3 == 0)
